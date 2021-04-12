@@ -1,0 +1,16 @@
+robotframework==3.2.2
+robotframework-databaselibrary==1.2.4
+robotframework-datadriver==0.3.6
+robotframework-requests==0.6.6
+<<<<<<< HEAD
+robotframework-jsonlibrary==0.3.1
+=======
+robotframework-seleniumlibrary==4.5.0
+>>>>>>> develop
+requests==2.22.0
+psycopg2-binary==2.8.5
+pandas==0.23.0
+numpy==1.18.1
+openpyxl==2.5.3
+cx-Oracle==8.0.0
+pymssql==2.1.5

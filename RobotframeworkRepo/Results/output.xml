@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.2 on darwin)" generated="20210403 00:14:20.924" rpa="false">
+<suite id="s1" name="06 MEDSEXTRACTOR" source="/Users/svengatachalam/Medidata/repos/Tests/06_MEDSEXTRACTOR">
+<suite id="s1-s1" name="MEDSEXTRACTOR Test" source="/Users/svengatachalam/Medidata/repos/Tests/06_MEDSEXTRACTOR/MEDSEXTRACTOR_Test.robot">
+<test id="s1-s1-t1" name="Verify that user can extract Rave EDC data successfully for the existing subject using MEDS Extractor application">
+<kw name="Given User log into Rave EDC" library="MEDSEXTRACTOR">
+<kw name="Open" library="imedidata_Welcomepage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210403 00:14:22.088" level="INFO">Opening browser 'ff' to base url 'https://validation.imedidata.net/'.</msg>
+<msg timestamp="20210403 00:14:22.089" level="INFO">Firefox driver log is always forced to to: /Users/svengatachalam/Medidata/repos/Results/geckodriver-6.log</msg>
+<status status="PASS" starttime="20210403 00:14:22.087" endtime="20210403 00:15:00.888"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Welcome</arg>
+</arguments>
+<status status="PASS" starttime="20210403 00:15:00.889" endtime="20210403 00:15:00.906"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210403 00:15:00.906" endtime="20210403 00:15:01.387"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:14:22.087" endtime="20210403 00:15:01.388"></status>
+</kw>
+<kw name="Input Username" library="imedidata_Welcomepage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>session[username]</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210403 00:15:01.390" level="INFO">Typing text 'medsuser01_uispecflow' into text field 'session[username]'.</msg>
+<status status="PASS" starttime="20210403 00:15:01.389" endtime="20210403 00:15:01.432"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:15:01.388" endtime="20210403 00:15:01.432"></status>
+</kw>
+<kw name="Input Password" library="imedidata_Welcomepage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>session[password]</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20210403 00:15:01.433" level="INFO">Typing text 'MedsPassword13' into text field 'session[password]'.</msg>
+<status status="PASS" starttime="20210403 00:15:01.432" endtime="20210403 00:15:01.462"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:15:01.432" endtime="20210403 00:15:01.462"></status>
+</kw>
+<kw name="Login" library="imedidata_Welcomepage">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>create_session_link</arg>
+</arguments>
+<msg timestamp="20210403 00:15:01.462" level="INFO">Clicking button 'create_session_link'.</msg>
+<status status="PASS" starttime="20210403 00:15:01.462" endtime="20210403 00:15:06.742"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:15:01.462" endtime="20210403 00:15:06.742"></status>
+</kw>
+<kw name="Load" library="imedidata_Homepage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>iMedidata</arg>
+<arg>timeout=20s</arg>
+</arguments>
+<status status="PASS" starttime="20210403 00:15:06.743" endtime="20210403 00:15:06.766"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:15:06.742" endtime="20210403 00:15:06.767"></status>
+</kw>
+<kw name="Open Rave EDC" library="imedidata_Homepage">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>Rave EDC</arg>
+</arguments>
+<msg timestamp="20210403 00:15:06.768" level="INFO">Clicking link 'Rave EDC'.</msg>
+<status status="PASS" starttime="20210403 00:15:06.767" endtime="20210403 00:15:12.023"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:15:06.767" endtime="20210403 00:15:12.023"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:14:22.087" endtime="20210403 00:15:12.024"></status>
+</kw>
+<kw name="And navigate to existing subject in Rave EDC" library="MEDSEXTRACTOR">
+<kw name="Load" library="RaveEDC_AllStudiespage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>All Studies</arg>
+<arg>timeout=30s</arg>
+</arguments>
+<status status="PASS" starttime="20210403 00:15:12.026" endtime="20210403 00:15:37.468"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:15:12.025" endtime="20210403 00:15:37.469"></status>
+</kw>
+<kw name="Select a study" library="RaveEDC_AllStudiespage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>search-term</arg>
+</arguments>
+<msg timestamp="20210403 00:15:37.470" level="INFO">Clicking element 'search-term'.</msg>
+<status status="PASS" starttime="20210403 00:15:37.470" endtime="20210403 00:15:37.703"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>search-term</arg>
+<arg>${Studies}[0]</arg>
+</arguments>
+<msg timestamp="20210403 00:15:37.704" level="INFO">Typing text 'hgvalrave021-Study' into text field 'search-term'.</msg>
+<status status="PASS" starttime="20210403 00:15:37.703" endtime="20210403 00:15:37.761"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>search-list-submit</arg>
+</arguments>
+<msg timestamp="20210403 00:15:37.761" level="INFO">Clicking button 'search-list-submit'.</msg>
+<status status="PASS" starttime="20210403 00:15:37.761" endtime="20210403 00:15:42.998"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>results for '${Studies}[0]'</arg>
+<arg>timeout=30s</arg>
+</arguments>
+<status status="PASS" starttime="20210403 00:15:42.999" endtime="20210403 00:15:54.301"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="main"]/div/div[2]/table/tbody/tr[1]/td[1]</arg>
+</arguments>
+<msg timestamp="20210403 00:15:54.302" level="INFO">Clicking element 'xpath=//*[@id="main"]/div/div[2]/table/tbody/tr[1]/td[1]'.</msg>
+<status status="PASS" starttime="20210403 00:15:54.302" endtime="20210403 00:15:59.535"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:15:37.469" endtime="20210403 00:15:59.536"></status>
+</kw>
+<kw name="Load" library="RaveEDC_Sitespage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Sites</arg>
+<arg>timeout=30s</arg>
+</arguments>
+<status status="PASS" starttime="20210403 00:15:59.537" endtime="20210403 00:16:09.500"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:15:59.536" endtime="20210403 00:16:09.500"></status>
+</kw>
+<kw name="Select a site" library="RaveEDC_Sitespage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>search-term</arg>
+</arguments>
+<msg timestamp="20210403 00:16:09.501" level="INFO">Clicking element 'search-term'.</msg>
+<status status="PASS" starttime="20210403 00:16:09.501" endtime="20210403 00:16:09.728"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>search-term</arg>
+<arg>${Sites}[0]</arg>
+</arguments>
+<msg timestamp="20210403 00:16:09.728" level="INFO">Typing text 'Rave-SM-Site100' into text field 'search-term'.</msg>
+<status status="PASS" starttime="20210403 00:16:09.728" endtime="20210403 00:16:09.767"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>search-list-submit</arg>
+</arguments>
+<msg timestamp="20210403 00:16:09.767" level="INFO">Clicking button 'search-list-submit'.</msg>
+<status status="PASS" starttime="20210403 00:16:09.767" endtime="20210403 00:16:15.169"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>results for '${Sites}[0]'</arg>
+<arg>timeout=20s</arg>
+</arguments>
+<status status="PASS" starttime="20210403 00:16:15.170" endtime="20210403 00:16:15.200"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="main"]/div/div[2]/table/tbody/tr[1]/td[1]</arg>
+</arguments>
+<msg timestamp="20210403 00:16:15.201" level="INFO">Clicking element 'xpath=//*[@id="main"]/div/div[2]/table/tbody/tr[1]/td[1]'.</msg>
+<status status="PASS" starttime="20210403 00:16:15.201" endtime="20210403 00:16:20.441"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:16:09.500" endtime="20210403 00:16:20.442"></status>
+</kw>
+<kw name="Load" library="RaveEDC_Subjectpage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Subjects</arg>
+<arg>timeout=20s</arg>
+</arguments>
+<status status="PASS" starttime="20210403 00:16:20.443" endtime="20210403 00:16:20.454"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:16:20.442" endtime="20210403 00:16:20.454"></status>
+</kw>
+<kw name="Select a subject" library="RaveEDC_Subjectpage">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20210403 00:16:30.456" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210403 00:16:20.455" endtime="20210403 00:16:30.457"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="search"]/div/div/div/div/input</arg>
+</arguments>
+<msg timestamp="20210403 00:16:30.458" level="INFO">Clicking element 'xpath=//*[@id="search"]/div/div/div/div/input'.</msg>
+<status status="PASS" starttime="20210403 00:16:30.457" endtime="20210403 00:16:30.706"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="search"]/div/div/div/div/input</arg>
+<arg>${Subjects}[0]</arg>
+</arguments>
+<msg timestamp="20210403 00:16:30.707" level="INFO">Typing text 'SN Val - 2021.1.0' into text field 'xpath=//*[@id="search"]/div/div/div/div/input'.</msg>
+<status status="PASS" starttime="20210403 00:16:30.706" endtime="20210403 00:16:30.764"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div/div/div[2]/div[2]/div[1]/div/div[2]/div/div/span/a</arg>
+</arguments>
+<msg timestamp="20210403 00:16:30.765" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/div/div[2]/div[2]/div[1]/div/div[2]/div/div/span/a'.</msg>
+<status status="PASS" starttime="20210403 00:16:30.765" endtime="20210403 00:16:30.993"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20210403 00:16:33.995" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210403 00:16:30.993" endtime="20210403 00:16:33.996"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div/div/div[2]/div[2]/div[2]/div/div/div[1]/table/tbody/tr/td[1]</arg>
+</arguments>
+<msg timestamp="20210403 00:16:33.997" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/div/div[2]/div[2]/div[2]/div/div/div[1]/table/tbody/tr/td[1]'.</msg>
+<status status="PASS" starttime="20210403 00:16:33.996" endtime="20210403 00:16:34.234"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:16:20.455" endtime="20210403 00:16:34.234"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:15:12.024" endtime="20210403 00:16:34.234"></status>
+</kw>
+<kw name="And navigate to screening Visit form with data for existing subject" library="MEDSEXTRACTOR">
+<kw name="Load" library="RaveEDC_SubjectDetailpage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Actions</arg>
+<arg>timeout=20s</arg>
+</arguments>
+<status status="PASS" starttime="20210403 00:16:34.237" endtime="20210403 00:16:34.248"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:16:34.236" endtime="20210403 00:16:34.248"></status>
+</kw>
+<kw name="Select Screening Visit" library="RaveEDC_SubjectDetailpage">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210403 00:16:39.251" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210403 00:16:34.249" endtime="20210403 00:16:39.252"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div/div/div[1]/div/div[2]/ul/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20210403 00:16:39.253" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/div/div[1]/div/div[2]/ul/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210403 00:16:39.252" endtime="20210403 00:16:39.494"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210403 00:16:40.497" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210403 00:16:39.494" endtime="20210403 00:16:40.498"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="1028736"]</arg>
+</arguments>
+<msg timestamp="20210403 00:16:40.499" level="INFO">Clicking element 'xpath=//*[@id="1028736"]'.</msg>
+<status status="PASS" starttime="20210403 00:16:40.498" endtime="20210403 00:16:40.743"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:16:34.248" endtime="20210403 00:16:40.744"></status>
+</kw>
+<kw name="Load" library="RaveEDC_ScreeningVisitspage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Date of Subject Screening</arg>
+<arg>timeout=20s</arg>
+</arguments>
+<status status="PASS" starttime="20210403 00:16:40.745" endtime="20210403 00:16:41.356"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:16:40.745" endtime="20210403 00:16:41.356"></status>
+</kw>
+<kw name="Enter Date" library="RaveEDC_ScreeningVisitspage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div/div/div[2]/div/datapage/div/form/div/div[2]/div/div/portrait-form-view/div/div[3]/div/div/div/div</arg>
+</arguments>
+<msg timestamp="20210403 00:16:41.357" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/div/div[2]/div/datapage/div/form/div/div[2]/div/div/portrait-form-view/div/div[3]/div/div/div/div'.</msg>
+<status status="PASS" starttime="20210403 00:16:41.357" endtime="20210403 00:16:41.658"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210403 00:16:42.661" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210403 00:16:41.658" endtime="20210403 00:16:42.663"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="field-control-area"]/div[2]/div/div/portrait-form-view/div/div[3]/div/div/div/div/span[1]/span/span/span/div/div/input[1]</arg>
+<arg>19</arg>
+</arguments>
+<msg timestamp="20210403 00:16:42.664" level="INFO">Typing text '19' into text field 'xpath=//*[@id="field-control-area"]/div[2]/div/div/portrait-form-view/div/div[3]/div/div/div/div/span[1]/span/span/span/div/div/input[1]'.</msg>
+<status status="PASS" starttime="20210403 00:16:42.663" endtime="20210403 00:16:42.715"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="field-control-area"]/div[2]/div/div/portrait-form-view/div/div[3]/div/div/div/div/span[1]/span/span/span/div/div/input[2]</arg>
+<arg>2020</arg>
+</arguments>
+<msg timestamp="20210403 00:16:42.715" level="INFO">Typing text '2020' into text field 'xpath=//*[@id="field-control-area"]/div[2]/div/div/portrait-form-view/div/div[3]/div/div/div/div/span[1]/span/span/span/div/div/input[2]'.</msg>
+<status status="PASS" starttime="20210403 00:16:42.715" endtime="20210403 00:16:42.769"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>xpath=//*[@id="field-control-area"]/div[2]/div/div/portrait-form-view/div/div[3]/div/div/div/div/span[1]/span/span/span/div/div/select[1]</arg>
+<arg>string:Oct</arg>
+</arguments>
+<msg timestamp="20210403 00:16:42.770" level="INFO">Selecting options from selection list 'xpath=//*[@id="field-control-area"]/div[2]/div/div/portrait-form-view/div/div[3]/div/div/div/div/span[1]/span/span/span/div/div/select[1]' by value string:Oct.</msg>
+<status status="PASS" starttime="20210403 00:16:42.769" endtime="20210403 00:16:42.797"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>15s</arg>
+</arguments>
+<msg timestamp="20210403 00:16:57.799" level="INFO">Slept 15 seconds</msg>
+<status status="PASS" starttime="20210403 00:16:42.797" endtime="20210403 00:16:57.799"></status>
+</kw>
+<kw name="Take Screenshot" library="ScreenCapLibrary">
+<doc>Takes a screenshot in the specified format at library import and
+embeds it into the log file (PNG by default).</doc>
+<arguments>
+<arg>name=site_selected</arg>
+<arg>format=jpg</arg>
+<arg>width=800px</arg>
+</arguments>
+<msg timestamp="20210403 00:16:58.040" level="INFO" html="yes">&lt;a href="site_selected_3.jpg"&gt;&lt;img src="site_selected_3.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210403 00:16:57.800" endtime="20210403 00:16:58.040"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:16:41.356" endtime="20210403 00:16:58.040"></status>
+</kw>
+<kw name="Click Save" library="RaveEDC_SubjectDetailpage">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>save-button</arg>
+</arguments>
+<msg timestamp="20210403 00:16:58.041" level="INFO">Clicking button 'save-button'.</msg>
+<status status="PASS" starttime="20210403 00:16:58.041" endtime="20210403 00:16:58.310"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:16:58.041" endtime="20210403 00:16:58.311"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:16:34.235" endtime="20210403 00:16:58.311"></status>
+</kw>
+<kw name="And navigate to Informed Consent form, add data in the form" library="MEDSEXTRACTOR">
+<kw name="Select Informed Consent" library="RaveEDC_SubjectDetailpage">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20210403 00:17:08.314" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210403 00:16:58.313" endtime="20210403 00:17:08.315"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="1028731"]</arg>
+</arguments>
+<msg timestamp="20210403 00:17:08.316" level="INFO">Clicking element 'xpath=//*[@id="1028731"]'.</msg>
+<status status="PASS" starttime="20210403 00:17:08.315" endtime="20210403 00:17:08.559"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:16:58.313" endtime="20210403 00:17:08.559"></status>
+</kw>
+<kw name="Load" library="RaveEDC_InformedConsentpage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Did subject complete Informed Consent?</arg>
+<arg>timeout=20s</arg>
+</arguments>
+<status status="PASS" starttime="20210403 00:17:08.560" endtime="20210403 00:17:27.808"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:17:08.560" endtime="20210403 00:17:27.808"></status>
+</kw>
+<kw name="Enter Data" library="RaveEDC_InformedConsentpage">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20210403 00:17:30.809" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210403 00:17:27.809" endtime="20210403 00:17:30.810"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20210403 00:17:33.812" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210403 00:17:30.810" endtime="20210403 00:17:33.812"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div/div/div[2]/div/datapage/div/form/div/div[2]/div/div/portrait-form-view/div[2]/div[3]/div/div/div/div/span/span/span/span/div/div/input[1]</arg>
+<arg>08</arg>
+</arguments>
+<msg timestamp="20210403 00:17:33.813" level="INFO">Typing text '08' into text field 'xpath=/html/body/div[4]/div/div/div[2]/div/datapage/div/form/div/div[2]/div/div/portrait-form-view/div[2]/div[3]/div/div/div/div/span/span/span/span/div/div/input[1]'.</msg>
+<status status="PASS" starttime="20210403 00:17:33.813" endtime="20210403 00:17:33.848"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="field-control-area"]/div[2]/div/div/portrait-form-view/div[2]/div[3]/div/div/div/div/span/span/span/span/div/div/select</arg>
+</arguments>
+<msg timestamp="20210403 00:17:33.848" level="INFO">Clicking element 'xpath=//*[@id="field-control-area"]/div[2]/div/div/portrait-form-view/div[2]/div[3]/div/div/div/div/span/span/span/span/div/div/select'.</msg>
+<status status="PASS" starttime="20210403 00:17:33.848" endtime="20210403 00:17:34.112"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>xpath=//*[@id="field-control-area"]/div[2]/div/div/portrait-form-view/div[2]/div[3]/div/div/div/div/span/span/span/span/div/div/select</arg>
+<arg>string:Feb</arg>
+</arguments>
+<msg timestamp="20210403 00:17:34.113" level="INFO">Selecting options from selection list 'xpath=//*[@id="field-control-area"]/div[2]/div/div/portrait-form-view/div[2]/div[3]/div/div/div/div/span/span/span/span/div/div/select' by value string:Feb.</msg>
+<status status="PASS" starttime="20210403 00:17:34.112" endtime="20210403 00:17:34.364"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210403 00:17:39.367" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210403 00:17:34.364" endtime="20210403 00:17:39.368"></status>
+</kw>
+<kw name="Take Screenshot" library="ScreenCapLibrary">
+<doc>Takes a screenshot in the specified format at library import and
+embeds it into the log file (PNG by default).</doc>
+<arguments>
+<arg>name=informed_consent</arg>
+<arg>format=jpg</arg>
+<arg>width=800px</arg>
+</arguments>
+<msg timestamp="20210403 00:17:39.526" level="INFO" html="yes">&lt;a href="informed_consent_1.jpg"&gt;&lt;img src="informed_consent_1.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210403 00:17:39.368" endtime="20210403 00:17:39.526"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:17:27.808" endtime="20210403 00:17:39.527"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:16:58.312" endtime="20210403 00:17:39.527"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210403 00:17:39.527" endtime="20210403 00:17:39.849"></status>
+</kw>
+<status status="PASS" starttime="20210403 00:14:22.086" endtime="20210403 00:17:39.849" critical="yes"></status>
+</test>
+<doc>EDC raw data E2E robot framework automation suite</doc>
+<status status="PASS" starttime="20210403 00:14:20.948" endtime="20210403 00:17:39.850"></status>
+</suite>
+<status status="PASS" starttime="20210403 00:14:20.926" endtime="20210403 00:17:39.852"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="06 MEDSEXTRACTOR">06 MEDSEXTRACTOR</stat>
+<stat pass="1" fail="0" id="s1-s1" name="MEDSEXTRACTOR Test">06 MEDSEXTRACTOR.MEDSEXTRACTOR Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
